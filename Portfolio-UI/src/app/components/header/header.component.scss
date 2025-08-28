@@ -1,0 +1,15 @@
+.profile-header {}
+
+:host ::ng-deep .p-megamenu-horizontal {
+   background: #121212;
+   color: #FFFFFF;
+}
+
+:host ::ng-deep .p-megamenu-item-link {
+   color: #FFFFFF;
+}
+
+:host ::ng-deep .p-megamenu-item-link:hover {
+   color: #121212;
+   background-color: #FFFFFF;
+}
