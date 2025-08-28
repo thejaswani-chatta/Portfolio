@@ -9,7 +9,7 @@ import { User } from './user/user.entity';
   imports: [
     TypeOrmModule.forRoot({
      type: 'postgres',
-      host: 'localhost', // since NestJS runs on your host machine
+      host: 'db-host-from-provider', // since NestJS runs on your host machine
       port: 5432,
       username: 'nestuser',       // same as POSTGRES_USER
       password: 'nestpassword',   // same as POSTGRES_PASSWORD
