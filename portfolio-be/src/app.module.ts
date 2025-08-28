@@ -8,19 +8,22 @@ import { User } from './user/user.entity';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-     type: 'postgres',
+      type: 'postgres',
       host: process.env.DATABASE_URL, // since NestJS runs on your host machine
       port: 5432,
       username: 'nestuser',       // same as POSTGRES_USER
       password: 'nestpassword',   // same as POSTGRES_PASSWORD
-      database: 'nestdb',         
+      database: 'nestdb',
       entities: [User],
-      synchronize: true, 
+      synchronize: true,
       logging: ['query'],
+      ssl: {
+        rejectUnauthorized: false
+      }
     }),
     UserModule,
   ],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }
