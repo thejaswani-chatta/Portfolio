@@ -5,11 +5,12 @@ import { join } from 'path';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+   const server = app.getHttpAdapter().getInstance() as express.Application;
     // Serve static Angular files
-  app.use(express.static(join(__dirname, '..', 'public')));
+  server .use(express.static(join(__dirname, '..', 'public')));
 
   // Redirect all routes to Angular index.html
-  app.get('*', (_req, res) => {
+  server .get('*', (_req: Request, res: any) => {
     res.sendFile(join(__dirname, '..', 'public', 'index.html'));
   });
    app.enableCors({
