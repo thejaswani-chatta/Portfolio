@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, map, Observable } from 'rxjs';
+import { environment } from '../../environment/environment.dev';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +19,7 @@ export class SharedService {
   }
 
   getUserinfo(): Observable<any> {
-    let url = 'http://localhost:3000/user/2';
+    let url = environment.baseUrl + '/user/2';
 
     return this.http.get(url).pipe(map(this.extractData.bind(this),
       catchError((err) => this.handleError(err))))
