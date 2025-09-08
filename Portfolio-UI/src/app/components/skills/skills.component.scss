@@ -1,0 +1,10 @@
+.about-page {
+  margin: 10px 100px 10px 100px;
+  display: flex;
+  align-items: flex-start; /* ensures children take their content height */
+  gap: 1rem;
+}
+
+.dark > :host ::ng-deep .p-card-body {
+  background: black;
+}

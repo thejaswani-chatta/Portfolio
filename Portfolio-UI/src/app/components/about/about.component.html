@@ -1,41 +1,41 @@
-<div class="d-flex about-page" style="height: auto;">
-    <div *ngIf="userInfo">
-        <p-card class="p-card--elevated">
-            <h4 class="profile-header">Hello there! I'm {{userInfo.name}},</h4>
-            <h4>Full stack developer</h4>
-            <div style="white-space: pre-line;">
-                {{userInfo.description}}
-            </div>
-            <div class="fun-facts">
-                <div class="fact-card">
-                    <i class="pi pi-users"></i>
-                    <p>I'm slightly addicted to social media</p>
-                </div>
-                <div class="fact-card">
-                    <i class="pi pi-video"></i>
-                    <p>I love to watch movies</p>
-                </div>
-                <div class="fact-card">
-                    <i class="pi pi-star"></i>
-                    <p>I drink a lot of tea</p>
-                </div>
-            </div>
-        </p-card>
-    </div>
-    <div>
-        <div class="profile-pic">
-            <img src="assets/img1.jpg" alt="Its me" width="400" height="400" />
+<div class="d-flex about-page" style="height: auto">
+  <div *ngIf="userInfo">
+    <div class="card card--elevated dark-theme">
+      <h4 class="header">Hello there! I'm {{ userInfo.name }},</h4>
+      <h4>Full stack developer</h4>
+      <div style="white-space: pre-line">
+        {{ userInfo.description }}
+      </div>
+      <div class="fun-facts">
+        <div class="fact-card">
+          <i class="pi pi-users"></i>
+          <p>I'm slightly addicted to social media</p>
         </div>
-        <div class="contact">
-            <div>
-                <i class="pi pi-phone">+49 1627627333</i>
-            </div>
-            <div>
-                <i class="pi pi-whatsapp">+91 9553820337</i>
-            </div>
-            <div>
-                <i class="pi pi-envelope">thejaswani.chatta&#64;gmail.com</i>
-            </div>
+        <div class="fact-card">
+          <i class="pi pi-video"></i>
+          <p>I love to watch movies</p>
         </div>
+        <div class="fact-card">
+          <i class="pi pi-star"></i>
+          <p>I drink a lot of tea</p>
+        </div>
+      </div>
     </div>
+  </div>
+  <div>
+    <div class="profile-pic">
+      <img src="assets/img1.jpg" alt="Its me" width="400" height="400" />
+    </div>
+    <div class="p-card card--elevated contact">
+      <div>
+        <i class="pi pi-phone"> &nbsp;+49 1627627333</i>
+      </div>
+      <div>
+        <i class="pi pi-whatsapp">&nbsp;+91 9553820337</i>
+      </div>
+      <div>
+        <i class="pi pi-envelope">&nbsp;thejaswani.chatta&#64;gmail.com</i>
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,0 +1,20 @@
+<div class="about-page">
+  <div class="card dark-theme">
+    <h4>Skills and Expertise</h4>
+    <div class="d-flex flex-wrap gap-3 justify-content-center">
+      <div class="flex-shrink-0 card--elevated" *ngFor="let skill of skills">
+        <p-card class="p-card--elevated dark text-center">
+          <img
+            [alt]="skill.alt"
+            [src]="skill.image"
+            width="50"
+            height="50"
+            class="mb-2"
+          />
+          <ng-template #title>{{ skill.name }}</ng-template>
+          <ng-template #subtitle>{{ skill.level }}</ng-template>
+        </p-card>
+      </div>
+    </div>
+  </div>
+</div>

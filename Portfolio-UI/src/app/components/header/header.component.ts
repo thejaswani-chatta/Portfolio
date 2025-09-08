@@ -25,15 +25,24 @@ items: MegaMenuItem[] | undefined;
             },
             {
                 label: 'Skills',
-                icon: 'pi pi-star'
+                icon: 'pi pi-star',
+                command: () => {
+                    this.router.navigate(['/skills']);
+                }
             },
             {
                 label: 'Projects',
-                icon: 'pi pi-folder'
+                icon: 'pi pi-folder',
+                command: () => {
+                    this.router.navigate(['/projects']);
+                }
             },
             {
                 label: 'Contact',
-                icon: 'pi pi-phone'
+                icon: 'pi pi-phone',
+                command: () => {
+                    this.router.navigate(['/contact']);
+                }
             },
         ];
     }

@@ -1,0 +1,48 @@
+<div class="d-flex justify-content-center align-items-center mt-2">
+  <div
+    class="card dark-theme align-items-center card--elevated"
+    style="width: 1000px"
+  >
+    <div style="width: 400px" class="text-center d-flex flex-column gap-2">
+      <h4>Contact Me</h4>
+      <div>
+        <i class="pi pi-envelope">&nbsp;thejaswani.chatta&#64;gmail.com</i>
+      </div>
+      <div>
+        <i class="pi pi-phone"> &nbsp;+49 1627627333</i>
+      </div>
+      <div>
+        <i class="pi pi-whatsapp">&nbsp;+91 9553820337</i>
+      </div>
+      <div>
+        <a
+          href="https://github.com/thejaswani-chatta"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="pi pi-github">&nbsp;thejaswani-chatta</i></a
+        >
+      </div>
+      <p-floatlabel variant="in">
+        <input pInputText id="name" [(ngModel)]="name" autocomplete="off" />
+        <label for="name">Name</label>
+      </p-floatlabel>
+      <p-floatlabel variant="in">
+        <input pInputText id="email" [(ngModel)]="email" autocomplete="off" />
+        <label for="email">Email</label>
+      </p-floatlabel>
+      <p-floatlabel variant="in">
+        <textarea
+          pTextarea
+          id="message"
+          [(ngModel)]="message"
+          rows="5"
+          cols="30"
+          style="resize: none"
+          class="h-full"
+        ></textarea>
+        <label for="message">Message</label>
+      </p-floatlabel>
+      <p-button label="Send" variant="outlined" severity="contrast" />
+    </div>
+  </div>
+</div>

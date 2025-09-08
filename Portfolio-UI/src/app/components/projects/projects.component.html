@@ -1,0 +1,31 @@
+<div class="about-page">
+  <div class="card dark-theme">
+    <h4 class="text-center mb-2">Professional Experience</h4>
+    <div *ngFor="let exp of professionalExperience">
+      <li>
+        {{ exp.companyName }}, {{ exp.designation }},
+        {{ exp.timePeriod }}
+      </li>
+    </div>
+  </div>
+  <div class="card dark-theme">
+    <h4 class="text-center mb-2">Projects</h4>
+    <p class="text-center mb-3">A selection of my work</p>
+
+    <div
+      class="row g-2 justify-content-center card--elevated"
+      *ngFor="let project of projects"
+    >
+      <!-- Project A -->
+      <div class="card shadow-sm h-">
+        <div class="card-body">
+          <h5 class="card-title">Project: {{ project.projectName }}</h5>
+          <b>{{ project.companyName }}</b>
+          <p class="card-text">
+            {{ project.description }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

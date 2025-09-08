@@ -1,16 +1,12 @@
-.profile-header {
-    color: #121212;
-}
-
 .about-page {
-    margin:10px 100px 10px 100px;
-      display: flex;
-    align-items: flex-start; /* ensures children take their content height */
-    gap: 1rem;
+  margin: 10px 100px 10px 100px;
+  display: flex;
+  align-items: flex-start; /* ensures children take their content height */
+  gap: 1rem;
 }
 
 p-card {
-    margin: 10px;
+  margin: 10px;
 }
 
 .profile-pic {
@@ -21,8 +17,8 @@ p-card {
 }
 
 img {
-    border: 1px solid #ffffff;
-    border-radius: 55%;
+  border: 1px solid #ffffff;
+  border-radius: 55%;
 }
 
 .fun-facts {
@@ -41,10 +37,19 @@ img {
   border-radius: 10px;
   padding: 1rem;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  color: #121212;
 }
 
 .contact {
   text-align: center;
   padding: 30px;
+}
+
+::ng-deep .p-card {
+  background-color: #121212;
+  color: #f9f9f9;
+  .fact-card {
+    color: #121212;
+  }
 }
