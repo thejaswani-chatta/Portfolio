@@ -13,9 +13,8 @@ export class TransformInterceptor<T> implements NestInterceptor<T, any> {
     const response = context.switchToHttp().getResponse();
     return next.handle().pipe(
       map((data) => {
-        return {
-          data,
-        };
+        return 
+          data
       }),
     );
   }
