@@ -1,9 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { importsModule } from './imports';
 import { SharedService } from './services/shared.service';
-
 
 @Component({
   selector: 'app-root',
@@ -12,6 +11,14 @@ import { SharedService } from './services/shared.service';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
+  constructor(private sharedService: SharedService) {}
   title = 'Portfolio-UI';
+  loading: boolean = false;
+
+  ngOnInit() {
+    this.sharedService.loading.subscribe(res => {
+      this.loading = res;
+    })
+  }
 }

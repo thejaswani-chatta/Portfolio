@@ -1,3 +1,5 @@
+      <p-toast />
+
 <div class="d-flex justify-content-center align-items-center mt-2">
   <div
     class="card dark-theme align-items-center card--elevated"
@@ -42,7 +44,7 @@
         ></textarea>
         <label for="message">Message</label>
       </p-floatlabel>
-      <p-button label="Send" variant="outlined" severity="contrast" />
+      <p-button label="Send" (click)="send()" variant="outlined" severity="contrast" />
     </div>
   </div>
 </div>

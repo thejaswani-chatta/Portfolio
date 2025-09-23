@@ -1,0 +1,29 @@
+.spinner {
+ position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4); /* semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* high z-index to overlay everything */
+  pointer-events: all;
+}
+
+.fixed-header {
+  position: fixed;   /* Fix the header */
+  top: 0;            /* Stick to the top */
+  left: 0;           /* Align to left */
+  width: 100%;       /* Full width */
+  color: white;
+  align-items: center;
+  z-index: 1000;     /* Make sure it stays on top */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.content {
+  margin-top: 60px;  /* Push content below the header */
+  padding: 20px;
+}

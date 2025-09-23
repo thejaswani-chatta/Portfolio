@@ -1,7 +1,7 @@
 <div class="about-page">
   <div class="card dark-theme">
-    <h4 class="text-center mb-2">Professional Experience</h4>
-    <div *ngFor="let exp of professionalExperience">
+    <h4 class="text-center">Professional Experience</h4>
+    <div *ngFor="let exp of professionalExperience" style="padding-left:20px">
       <li>
         {{ exp.companyName }}, {{ exp.designation }},
         {{ exp.timePeriod }}
@@ -14,10 +14,10 @@
 
     <div
       class="row g-2 justify-content-center card--elevated"
-      *ngFor="let project of projects"
+      
     >
       <!-- Project A -->
-      <div class="card shadow-sm h-">
+      <!-- <div class="card shadow-sm h-">
         <div class="card-body">
           <h5 class="card-title">Project: {{ project.projectName }}</h5>
           <b>{{ project.companyName }}</b>
@@ -25,7 +25,28 @@
             {{ project.description }}
           </p>
         </div>
-      </div>
+      </div> -->
+      <p-accordion value="0">
+        <p-accordion-panel [value]="i" *ngFor="let project of projects; let i=index">
+            <p-accordion-header>
+                <ng-template #toggleicon let-active="active">
+                    @if (active) {
+                        <i class="pi pi-minus"></i>
+                    } @else {
+                        <i class="pi pi-plus"></i>
+                    }
+                </ng-template>
+                <span class="flex items-center gap-2 w-full">
+                    <span class="font-bold whitespace-nowrap">Project: {{ project.projectName }}</span>
+                </span>
+            </p-accordion-header>
+            <p-accordion-content>
+                <p class="m-0">
+                   {{ project.description }}
+                </p>
+            </p-accordion-content>
+        </p-accordion-panel>
+    </p-accordion>
     </div>
   </div>
 </div>

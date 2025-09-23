@@ -1,2 +1,6 @@
-<app-header></app-header>
+<app-header class="fixed-header"></app-header>
+<div *ngIf="loading" class="spinner">
+    <p-progress-spinner [style]="{width: '100px', height: '100px'}" ariaLabel="loading" />
+</div>
+<div class="content"></div>
 <router-outlet></router-outlet>

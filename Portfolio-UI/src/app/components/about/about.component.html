@@ -4,7 +4,7 @@
       <h4 class="header">Hello there! I'm {{ userInfo.name }},</h4>
       <h4>Full stack developer</h4>
       <div style="white-space: pre-line">
-        {{ userInfo.description }}
+        {{ this.getUserDesc(userInfo.description) }}
       </div>
       <div class="fun-facts">
         <div class="fact-card">
@@ -26,7 +26,7 @@
     <div class="profile-pic">
       <img src="assets/img1.jpg" alt="Its me" width="400" height="400" />
     </div>
-    <div class="p-card card--elevated contact">
+    <div class="card card--elevated contact dark-theme">
       <div>
         <i class="pi pi-phone"> &nbsp;+49 1627627333</i>
       </div>

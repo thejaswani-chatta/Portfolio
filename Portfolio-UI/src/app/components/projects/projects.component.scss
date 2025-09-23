@@ -8,3 +8,7 @@
   width: 100%;
   margin: 10px;
 }
+
+.p-accordionpanel:not(.p-disabled).p-accordionpanel-active > .p-accordionheader:hover {
+  color: #121212
+}

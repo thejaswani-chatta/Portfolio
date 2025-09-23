@@ -24,7 +24,7 @@ export class ProjectsComponent {
     {
       projectName: 'Global Network Vision',
       companyName: 'BT Group, Design Engineer Professional',
-      description: `Built a business application for a workflow management tool using Angular 8, HTML, CSS3, and Bootstrap. Implemented Angular code for State Management and dynamic form rendering, which included a drag-and-drop feature to improve usability and productivity. Contributed to the project's technical architecture to ensure it was scalable and maintainable.  Participated in Agile Scrum ceremonies and peer code reviews to improve team productivity and maintain code quality.`,
+      description: `Built a business application for a workflow management tool using Angular 8 and Sprinboot. Implemented Angular code for State Management and dynamic form rendering, which included a drag-and-drop feature to improve usability and productivity. Contributed to the project's technical architecture to ensure it was scalable and maintainable.  Participated in Agile Scrum ceremonies and peer code reviews to improve team productivity and maintain code quality.`,
     },
     {
       projectName: 'Digital Customer Experience (TW-HUB) - Telstra, Australia',
